@@ -3,9 +3,9 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 
 @Controller('consumer')
 export class ConsumerController {
-  @MessagePattern('kafka-tutorial')
+  @MessagePattern('training-1')
   getHello(@Payload() message) {
     console.log(message);
-    return 'Hello World';
+    return 'Hello NestJS with Kafka';
   }
 }

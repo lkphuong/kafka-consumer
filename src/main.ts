@@ -1,6 +1,5 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { AppConfigService } from './config/app/app.service';
 import { Transport, MicroserviceOptions } from '@nestjs/microservices';
 
 async function bootstrap() {
@@ -13,7 +12,7 @@ async function bootstrap() {
           brokers: ['38.242.132.213:9092'],
         },
         consumer: {
-          groupId: 'my-kafka',
+          groupId: 'client-111',
         },
       },
     },
